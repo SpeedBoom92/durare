@@ -852,6 +852,18 @@ const PILLARS = [
 // =====================================================
 //  POSTER CINEMATOGRAFICI (SVG)
 // =====================================================
+// Estrae l'asset id Gumlet da un URL play.gumlet.io/embed/{ID}?... e ritorna un thumbnail URL
+function gumletThumb(ex) {
+  const url = (ex && (ex.videoSolo || ex.videoFiglio)) || '';
+  const m = url.match(/embed\/([a-f0-9]+)/);
+  if (!m) return null;
+  return `https://video.gumlet.io/6a323dafbf17ac22ca560e0e/${m[1]}/thumbnail-1-0.png`;
+}
+function exThumb(ex) {
+  const t = gumletThumb(ex);
+  if (t) return `<img src="${t}" loading="lazy" alt="${ex.name}" style="width:100%;height:100%;object-fit:cover;display:block;"/>`;
+  return poster(ex.poster);
+}
 function poster(type) {
   const defs = `<defs>
     <linearGradient id="bg-${type}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a1a18"/><stop offset="100%" stop-color="#0E0E10"/></linearGradient>
@@ -1260,7 +1272,7 @@ function renderTodayCard() {
     const exsHtml = sess.exs.map((id, i) => {
       const ex = ESERCIZI.find(e => e.id === id);
       return `<div class="today-ex" onclick="openExDetail('${id}')">
-        <div class="today-ex-thumb">${poster(ex.poster)}<div class="play-mini"></div></div>
+        <div class="today-ex-thumb">${exThumb(ex)}<div class="play-mini"></div></div>
         <div class="today-ex-body">
           <div class="today-ex-name">${ex.name}</div>
           <div class="today-ex-rep">${sess.reps[i]}</div>
@@ -1446,7 +1458,7 @@ function renderEsercizi() {
       <div class="cat-desc">${CAT_DESCS[cat]}</div>
       <div class="ex-grid">
         ${items.map(ex => `<div class="ex-card" onclick="openExDetail('${ex.id}')">
-          <div class="ex-poster">${poster(ex.poster)}</div>
+          <div class="ex-poster">${exThumb(ex)}</div>
           <div class="ex-meta-row">
             <div class="ex-cat">${ex.cat}</div>
             <div class="ex-name">${ex.name}</div>
@@ -1465,7 +1477,7 @@ function openExDetail(id) {
   if (!ex) return;
   const heroMedia = ex.videoSolo
     ? `<div style="position:relative; aspect-ratio:482/269; overflow:hidden;"><iframe loading="lazy" title="${ex.name}" src="${ex.videoSolo}" style="border:none; position:absolute; top:0; left:0; width:100%; height:100%;" referrerpolicy="origin" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"></iframe></div>`
-    : `<div class="ex-poster" style="aspect-ratio: 16/9;">${poster(ex.poster)}</div>`;
+    : `<div class="ex-poster" style="aspect-ratio: 16/9;">${exThumb(ex)}</div>`;
   const figlioMedia = ex.videoFiglio
     ? `<div style="position:relative; aspect-ratio:482/269; margin-top:14px; border-radius:6px; overflow:hidden;"><iframe loading="lazy" title="${ex.name} con tuo figlio" src="${ex.videoFiglio}" style="border:none; position:absolute; top:0; left:0; width:100%; height:100%;" referrerpolicy="origin" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"></iframe></div>`
     : '';
