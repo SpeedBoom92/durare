@@ -1148,29 +1148,7 @@ function renderTodayCard() {
   attachMiniPlayerListeners();
 }
 
-function renderMiniPlayer() {
-  const t = TRACKS[mpCurrentIdx] || TRACKS[0];
-  return `<div class="mini-player">
-    <div class="mp-mini-label">COLONNA SONORA</div>
-    <div class="mp-mini-row">
-      <div class="mp-mini-art ${mpIsPlaying ? 'playing' : ''}" id="mpArt">♫</div>
-      <div class="mp-mini-info">
-        <div class="mp-mini-title" id="mpTitle">${t.title}</div>
-        <div class="mp-mini-progress">
-          <div class="mp-mini-track" onclick="seekTrack(event)"><div class="mp-mini-fill" id="mpProgressFill" style="width:0%"></div></div>
-          <div class="mp-mini-times"><span id="mpCurrent">0:00</span><span id="mpDuration">${t.duration}</span></div>
-        </div>
-      </div>
-      <div class="mp-mini-controls">
-        <button class="mp-mini-btn" onclick="prevTrack()" title="Precedente">⏮</button>
-        <button class="mp-mini-btn mp-play" id="mpPlayBtn" onclick="togglePlay()" title="Play">${mpIsPlaying ? '❚❚' : '▶'}</button>
-        <button class="mp-mini-btn" onclick="nextTrack()" title="Successiva">⏭</button>
-        <button class="mp-mini-btn" onclick="togglePlaylist()" title="Playlist" style="margin-left:4px">≡</button>
-      </div>
-    </div>
-    <div class="mp-playlist" id="mpPlaylist" style="display:none"></div>
-  </div>`;
-}
+function renderMiniPlayer() { return ""; }
 
 function attachMiniPlayerListeners() {
   renderPlaylist();
