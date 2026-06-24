@@ -1455,10 +1455,16 @@ function openExDetail(id) {
   closeDayDetail();
   const ex = ESERCIZI.find(e => e.id === id);
   if (!ex) return;
-  const heroMedia = ex.videoSolo
-    ? `<div style="position:relative; aspect-ratio:482/269; overflow:hidden;"><iframe loading="lazy" title="${ex.name}" src="${ex.videoSolo}" style="border:none; position:absolute; top:0; left:0; width:100%; height:100%;" referrerpolicy="origin" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"></iframe></div>`
+  // Se manca videoSolo ma c'è videoFiglio, usa quello come hero (esercizi solo "con figlio")
+  const hasSolo = !!ex.videoSolo;
+  const hasFiglio = !!ex.videoFiglio;
+  const heroSrc = ex.videoSolo || ex.videoFiglio;
+  const heroTitle = hasSolo ? ex.name : `${ex.name} con tuo figlio`;
+  const heroMedia = heroSrc
+    ? `<div style="position:relative; aspect-ratio:482/269; overflow:hidden;"><iframe loading="lazy" title="${heroTitle}" src="${heroSrc}" style="border:none; position:absolute; top:0; left:0; width:100%; height:100%;" referrerpolicy="origin" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"></iframe></div>`
     : `<div class="ex-poster" style="aspect-ratio: 16/9;">${exThumb(ex)}</div>`;
-  const figlioMedia = ex.videoFiglio
+  // Mostra il video figlio sotto solo se l'hero era il SOLO (altrimenti è già stato usato come hero)
+  const figlioMedia = (hasSolo && hasFiglio)
     ? `<div style="position:relative; aspect-ratio:482/269; margin-top:14px; border-radius:6px; overflow:hidden;"><iframe loading="lazy" title="${ex.name} con tuo figlio" src="${ex.videoFiglio}" style="border:none; position:absolute; top:0; left:0; width:100%; height:100%;" referrerpolicy="origin" allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write"></iframe></div>`
     : '';
   document.getElementById('exDetailContent').innerHTML = `
