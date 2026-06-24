@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DURARE. — Il tuo viaggio</title>
+<title>Parent Power — Allenarsi per esserci</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,700;9..144,900&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -36,8 +36,11 @@ html, body { background: var(--nero); color: var(--panna); font-family: var(--bo
 /* TOP NAV */
 .topnav { background: var(--nero); border-bottom: 1px solid var(--terra-soft); position: sticky; top: 0; z-index: 50; backdrop-filter: blur(12px); }
 .topnav-inner { max-width: 920px; margin: 0 auto; padding: 14px 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-.brand { font-family: var(--display); font-weight: 900; font-size: 22px; color: var(--terra); letter-spacing: -0.03em; cursor: pointer; }
-.brand .dot { display: inline-block; width: 5px; height: 5px; background: var(--terra); border-radius: 50%; vertical-align: baseline; transform: translateY(-1px); margin-left: 2px; }
+.brand { display: flex; flex-direction: column; line-height: 1; cursor: pointer; }
+.brand-name { font-family: var(--display); font-weight: 900; font-size: 22px; color: var(--terra); letter-spacing: -0.03em; }
+.brand-name .dot { display: inline-block; width: 5px; height: 5px; background: var(--terra); border-radius: 50%; vertical-align: baseline; transform: translateY(-1px); margin-left: 2px; }
+.brand-claim { font-family: var(--display); font-style: italic; font-weight: 400; font-size: 11px; color: var(--terra); opacity: 0.7; letter-spacing: 0; margin-top: 2px; }
+@media (max-width: 540px) { .brand-claim { display: none; } }
 .nav-links { display: flex; gap: 6px; flex-wrap: wrap; }
 .nav-link { font-size: 13px; font-weight: 600; padding: 9px 16px; border-radius: 4px; cursor: pointer; transition: all 0.2s; color: var(--panna); border: 1px solid transparent; }
 .nav-link:hover { color: var(--terra); background: var(--terra-soft); border-color: var(--terra-soft-2); }
@@ -423,7 +426,7 @@ h3 { font-size: clamp(18px, 2.5vw, 22px); margin-bottom: 8px; }
 <!-- NAV -->
 <nav class="topnav">
   <div class="topnav-inner">
-    <div class="brand" onclick="navTo('home')">DURARE<span class="dot"></span></div>
+    <div class="brand" onclick="navTo('home')"><div class="brand-name">Parent Power<span class="dot"></span></div><div class="brand-claim">Allenarsi per esserci.</div></div>
     <div class="nav-links">
       <div class="nav-link" data-route="home" onclick="navTo('home')">Home</div>
       <div class="nav-link" data-route="programma" onclick="navTo('programma')">Programma</div>
