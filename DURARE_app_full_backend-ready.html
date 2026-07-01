@@ -620,7 +620,7 @@ const CAT_DESCS = {
   "Gambe & Glutei": "I fondamenti del corpo basso. Riallineano postura, schiena e capacità di camminare a lungo senza stancarsi.",
   "Upper Body": "La parte alta. Più semplici di quel che sembrano, costruiscono spalle e schiena che reggono la giornata.",
   "Core": "Il centro del corpo. Tre esercizi su quattro qui dentro vengono da McGill — sono il fondamento di ogni programma serio per la schiena.",
-  "Cardio dolce": "Movimento ritmico, niente salti, niente affanno estremo. Riscaldano e attivano senza esaurire."
+  "Cardio & Full body": "Movimento dinamico globale. Un solo esercizio, il mezzo burpee, per attivare tutto il corpo senza forzare le articolazioni."
 };
 
 const ESERCIZI = [
@@ -632,7 +632,8 @@ const ESERCIZI = [
     easy: "Siediti davvero sulla sedia e rialzati. Lo stesso movimento, solo più semplice.", hard: "Lentamente — 4 secondi a scendere, 1 a risalire.",
     figlio: "Tieni tuo figlio in braccio davanti o sulle spalle. Lui pesa, tu spingi. Da 5 a 25 kg di sovraccarico naturale.",
     poster: "squat",
-    videoSolo:   "https://play.gumlet.io/embed/6a33a34d1ce628ced4a5cc14?background=false&autoplay=false&loop=true&disable_player_controls=false" },
+    videoSolo:   "https://play.gumlet.io/embed/6a44dea0e4e7cc890eccc9c1?background=false&autoplay=false&loop=true&disable_player_controls=false",
+    videoFiglio: "https://play.gumlet.io/embed/6a44de9f18d11bffd5ee0008?background=false&autoplay=false&loop=true&disable_player_controls=false" },
   { id: "affondo", name: "Affondo posteriore statico", pattern: "Piegamento unilaterale", cat: "Gambe & Glutei", duration: "30 sec per lato",
     source: "Standard nei Functional Movement Systems (Gray Cook)",
     how: "Da in piedi, fai un passo indietro con una gamba. Piega entrambe le ginocchia scendendo verticalmente — quella anteriore a 90°, quella posteriore sfiora il pavimento. Risali dal tallone anteriore.",
@@ -640,8 +641,8 @@ const ESERCIZI = [
     easy: "Appoggia una mano al muro. Riduci la profondità della discesa.", hard: "Quando risali, porta su il ginocchio posteriore fino al petto.",
     figlio: "Bambino in braccio davanti, come zaino davanti. Oppure davanti a te a darti un cinque alto a ogni risalita.",
     poster: "affondo",
-    videoSolo:   "https://play.gumlet.io/embed/6a33a34d1ce628ced4a5cc0e?background=false&autoplay=false&loop=true&disable_player_controls=false",
-    videoFiglio: "https://play.gumlet.io/embed/6a33a3494e9e9056498d01c1?background=false&autoplay=false&loop=true&disable_player_controls=false" },
+    videoSolo:   "https://play.gumlet.io/embed/6a44de9218d11bffd5edfe32?background=false&autoplay=false&loop=true&disable_player_controls=false",
+    videoFiglio: "https://play.gumlet.io/embed/6a44de92e4e7cc890eccc79e?background=false&autoplay=false&loop=true&disable_player_controls=false" },
   { id: "wallsit", name: "Wall Sit (squat al muro)", pattern: "Isometrico gambe", cat: "Gambe & Glutei", duration: "30-45 sec",
     source: "Riabilitazione standard (NHS, Mayo Clinic)",
     how: "Schiena appoggiata al muro. Scendi piegando le ginocchia a 90°, come fossi seduto su una sedia invisibile. Cosce parallele al pavimento, piedi sotto le ginocchia. Tieni la posizione.",
@@ -649,7 +650,7 @@ const ESERCIZI = [
     easy: "Scendi solo a 120° (meno profondo). Inizia con 15 sec.", hard: "Tieni 60 secondi o più. Oppure solleva una gamba da terra.",
     figlio: "Bambino in braccio davanti a te mentre tieni la posizione. Diventa una 'sedia umana' che funziona.",
     poster: "wallsit",
-    videoSolo:   "https://play.gumlet.io/embed/6a33a3424e9e9056498d00a2?background=false&autoplay=false&loop=true&disable_player_controls=false" },
+    videoSolo:   "https://play.gumlet.io/embed/6a44dea1e4e7cc890eccca4e?background=false&autoplay=false&loop=true&disable_player_controls=false" },
   { id: "calfraise", name: "Calf Raise (sollevamenti talloni)", pattern: "Polpacci", cat: "Gambe & Glutei", duration: "15 reps",
     source: "Universale — base in qualsiasi programma per gamba",
     how: "In piedi, mani su una sedia o sul muro per equilibrio. Sollevati sulle punte dei piedi il più alto possibile, pausa 1 sec in alto, scendi controllato.",
@@ -657,7 +658,7 @@ const ESERCIZI = [
     easy: "Con due mani appoggiate al muro per stabilità.", hard: "Su una gamba sola, alternando. Oppure dal gradino con scarpe (per scendere sotto il livello).",
     figlio: "Bambino in braccio per aggiungere peso. Conti insieme ad alta voce.",
     poster: "calfraise",
-    videoSolo:   "https://play.gumlet.io/embed/6a33a3424e9e9056498d0099?background=false&autoplay=false&loop=true&disable_player_controls=false" },
+    videoSolo:   "https://play.gumlet.io/embed/6a44de92e4e7cc890eccc7b9?background=false&autoplay=false&loop=true&disable_player_controls=false" },
   { id: "hiphinge", name: "Hip Hinge (cerniera dell'anca)", pattern: "Catena posteriore", cat: "Gambe & Glutei", duration: "10 reps",
     source: "Educazione motoria base (Stuart McGill, Mike Boyle)",
     how: "In piedi, piedi larghezza spalle, ginocchia leggermente piegate. Manda il bacino indietro come se stessi chiudendo una porta col sedere. Busto si abbassa avanti rimanendo dritto. Quando senti tirare dietro le cosce, torna su stringendo i glutei.",
@@ -665,7 +666,7 @@ const ESERCIZI = [
     easy: "Con un bastone lungo la schiena: testa, schiena alta, sacro devono toccare il bastone in ogni momento.", hard: "Con un peso (bottiglia da 1.5L o zaino con libri) tenuto al petto.",
     figlio: "Bambino seduto sul pavimento davanti, lo saluti con un inchino lento ogni volta che scendi. Conta i 'saluti del cavaliere'.",
     poster: "hiphinge",
-    videoSolo:   "https://play.gumlet.io/embed/6a33a3424e9e9056498d00aa?background=false&autoplay=false&loop=true&disable_player_controls=false" },
+    videoSolo:   "https://play.gumlet.io/embed/6a44de9218d11bffd5edfe3e?background=false&autoplay=false&loop=true&disable_player_controls=false" },
   { id: "glute", name: "Glute Bridge (Ponte)", pattern: "Estensione anche", cat: "Gambe & Glutei", duration: "40 sec",
     source: "Rieducazione lombare McGill, Pilates clinico",
     how: "Sdraiato sulla schiena, ginocchia piegate, piedi a terra vicino ai glutei. Spingi i talloni nel pavimento e solleva il bacino fino ad allineare spalle-ginocchia. Stringi i glutei in alto.",
@@ -673,8 +674,8 @@ const ESERCIZI = [
     easy: "Range ridotto: solleva il bacino solo a metà.", hard: "Single Leg Glute Bridge: una gamba sollevata in aria.",
     figlio: "Bambino seduto sul bacino o sulle ginocchia mentre spingi su. Diventa 'cavalluccio' verticale.",
     poster: "glute",
-    videoSolo:   "https://play.gumlet.io/embed/6a33a3496a4f24de8a4d6057?background=false&autoplay=false&loop=true&disable_player_controls=false",
-    videoFiglio: "https://play.gumlet.io/embed/6a33a3424e9e9056498d00ed?background=false&autoplay=false&loop=true&disable_player_controls=false" },
+    videoSolo:   "https://play.gumlet.io/embed/6a44de92e4e7cc890eccc7a3?background=false&autoplay=false&loop=true&disable_player_controls=false",
+    videoFiglio: "https://play.gumlet.io/embed/6a44de9218d11bffd5edfe40?background=false&autoplay=false&loop=true&disable_player_controls=false" },
   { id: "glutekick", name: "Glute Kickback", pattern: "Estensione anca singola", cat: "Gambe & Glutei", duration: "10 per gamba",
     source: "Universale — riabilitazione e Pilates",
     how: "A quattro zampe, spalle sopra le mani, ginocchia sotto le anche. Spingi una gamba indietro mantenendo il ginocchio piegato a 90°. Salire fino a portare la pianta del piede verso il soffitto, pausa, torna.",
@@ -682,7 +683,7 @@ const ESERCIZI = [
     easy: "Movimento più piccolo, sali solo a parallelo al pavimento.", hard: "Gamba tesa invece che piegata, oppure con caviglietta zavorrata leggera.",
     figlio: "Il bambino davanti a te ti dà un cinque sotto il piede sollevato. Diventa un gioco di tocchi.",
     poster: "glutekick",
-    videoFiglio: "https://play.gumlet.io/embed/6a33a3426a4f24de8a4d5f8a?background=false&autoplay=false&loop=true&disable_player_controls=false" },
+    videoFiglio: "https://play.gumlet.io/embed/6a44de92e4e7cc890eccc7bb?background=false&autoplay=false&loop=true&disable_player_controls=false" },
 
   // ---- UPPER BODY ----
   { id: "pushup", name: "Push-Up al muro / inclinato", pattern: "Spinta", cat: "Upper Body", duration: "30 sec",
@@ -692,15 +693,8 @@ const ESERCIZI = [
     easy: "Più alto è l'appoggio, più facile. Inizia dal muro in piedi.", hard: "Abbassa progressivamente l'appoggio fino al pavimento.",
     figlio: "Il bambino davanti a te. A ogni discesa gli dai un bacio sulla fronte. Lui ride, tu fai push-up.",
     poster: "pushup",
-    videoSolo:   "https://play.gumlet.io/embed/6a323e1ebf17ac22ca561abd?background=false&autoplay=false&loop=true&disable_player_controls=false",
-    videoFiglio: "https://play.gumlet.io/embed/6a323e6529923fe6a2079a7e?background=false&autoplay=false&loop=false&disable_player_controls=false" },
-  { id: "wallpush", name: "Wall Push isometrico", pattern: "Spinta isometrica", cat: "Upper Body", duration: "30 sec",
-    source: "Base riabilitativa spalla (NHS shoulder rehab)",
-    how: "Davanti a un muro, mani appoggiate alla larghezza delle spalle, gomiti leggermente piegati. Spingi forte contro il muro come se volessi spostarlo, tenendo la posizione. Senti petto e spalle che lavorano in isometria.",
-    wrong: "Trattenere il respiro. Respira normale, lo sforzo è continuo.",
-    easy: "30 sec di sforzo moderato.", hard: "60 sec sforzo massimo, o leggermente più lontano dal muro.",
-    figlio: "Il bambino sta tra te e il muro che 'spinge' al contrario. Diventa una gara di forza giocata.",
-    poster: "wallpush" },
+    videoSolo:   "https://play.gumlet.io/embed/6a44de9d18d11bffd5edffbc?background=false&autoplay=false&loop=true&disable_player_controls=false",
+    videoFiglio: "https://play.gumlet.io/embed/6a44de9de4e7cc890eccc944?background=false&autoplay=false&loop=true&disable_player_controls=false" },
   { id: "tricepdip", name: "Tricep Dip alla sedia", pattern: "Spinta verticale", cat: "Upper Body", duration: "30 sec",
     source: "Universale — bodyweight training",
     how: "Seduto sul bordo di una sedia stabile. Mani appoggiate al bordo accanto ai fianchi, dita rivolte in avanti. Slitta il sedere fuori dalla sedia. Piega i gomiti scendendo, risali con i tricipiti.",
@@ -708,18 +702,18 @@ const ESERCIZI = [
     easy: "Piedi vicini al sedere, ginocchia piegate.", hard: "Piedi distesi in avanti, oppure elevati su una seconda sedia.",
     figlio: "Il bambino conta a voce alta i tuoi dip. Oppure ti passa davanti ridendo: tu non fermi.",
     poster: "tricepdip",
-    videoFiglio: "https://play.gumlet.io/embed/6a33a3421ce628ced4a5ca95?background=false&autoplay=false&loop=true&disable_player_controls=false" },
+    videoFiglio: "https://play.gumlet.io/embed/6a44dea0e4e7cc890eccca02?background=false&autoplay=false&loop=true&disable_player_controls=false" },
 
   // ---- CORE ----
-  { id: "plank", name: "Plank in ginocchio", pattern: "Anti-estensione", cat: "Core", duration: "30 sec",
+  { id: "plank", name: "Plank", pattern: "Anti-estensione", cat: "Core", duration: "30 sec",
     source: "Universale — base core sicuro",
-    how: "Avambracci a terra, gomiti sotto le spalle. Ginocchia a terra come appoggio. Corpo in linea dalle ginocchia alla testa. Addome e glutei contratti.",
+    how: "Avambracci a terra, gomiti sotto le spalle. Ginocchia a terra come appoggio (versione base) o sulle punte (versione completa). Corpo in linea dalle ginocchia/piedi alla testa. Addome e glutei contratti.",
     wrong: "Bacino che scende verso terra. Meglio 15 sec perfetti che 60 storti.",
-    easy: "Inizia con 15 sec. Aumenta di 5 sec a settimana.", hard: "Plank pieno sulle punte dei piedi.",
+    easy: "Ginocchia a terra, inizia con 15 sec. Aumenta di 5 sec a settimana.", hard: "Plank pieno sulle punte dei piedi.",
     figlio: "'Il tunnel di papà': tieni la posizione, il bambino ti passa sotto la pancia ridendo.",
     poster: "plank",
-    videoSolo:   "https://play.gumlet.io/embed/6a323e81bf17ac22ca562798?background=false&autoplay=false&loop=false&disable_player_controls=false",
-    videoFiglio: "https://play.gumlet.io/embed/6a323eed29923fe6a207aaca?background=false&autoplay=false&loop=true&disable_player_controls=false" },
+    videoSolo:   "https://play.gumlet.io/embed/6a44de9c18d11bffd5edff9e?background=false&autoplay=false&loop=true&disable_player_controls=false",
+    videoFiglio: "https://play.gumlet.io/embed/6a44de9c18d11bffd5edff87?background=false&autoplay=false&loop=true&disable_player_controls=false" },
   { id: "birddog", name: "Bird Dog", pattern: "Stabilità e coordinazione", cat: "Core", duration: "8 per lato",
     source: "Stuart McGill — McGill Big 3, riferimento mondiale per la schiena",
     how: "A quattro zampe. Estendi contemporaneamente braccio destro avanti e gamba sinistra indietro, fino a parallelo al pavimento. Pausa 2 sec. Torna. Alterna.",
@@ -727,8 +721,8 @@ const ESERCIZI = [
     easy: "Solo braccio o solo gamba alla volta.", hard: "Fai toccare gomito e ginocchio opposti sotto la pancia tra le ripetizioni.",
     figlio: "Il bambino davanti ti passa una palla o un peluche di mano in mano sotto il busto ogni volta che alterni.",
     poster: "birddog",
-    videoSolo:   "https://play.gumlet.io/embed/6a33a3424e9e9056498d00ad?background=false&autoplay=false&loop=true&disable_player_controls=false",
-    videoFiglio: "https://play.gumlet.io/embed/6a33a3421ce628ced4a5ca9e?background=false&autoplay=false&loop=true&disable_player_controls=false" },
+    videoSolo:   "https://play.gumlet.io/embed/6a44de92e81b019c970db4da?background=false&autoplay=false&loop=true&disable_player_controls=false",
+    videoFiglio: "https://play.gumlet.io/embed/6a44de92e81b019c970db4df?background=false&autoplay=false&loop=true&disable_player_controls=false" },
   { id: "sideplank", name: "Side Plank in ginocchio", pattern: "Anti-laterale", cat: "Core", duration: "20 sec per lato",
     source: "Stuart McGill — McGill Big 3",
     how: "Su un fianco. Avambraccio a terra (gomito sotto la spalla), ginocchio inferiore appoggiato. Solleva il bacino, braccio libero teso al soffitto.",
@@ -736,8 +730,8 @@ const ESERCIZI = [
     easy: "Anche il ginocchio superiore appoggiato.", hard: "Sulla punta del piede invece che sul ginocchio.",
     figlio: "Il bambino tocca la tua mano libera in alto 5 volte mentre tieni la posizione.",
     poster: "sideplank",
-    videoSolo:   "https://play.gumlet.io/embed/6a33a3424e9e9056498d00a5?background=false&autoplay=false&loop=true&disable_player_controls=false",
-    videoFiglio: "https://play.gumlet.io/embed/6a33a3421ce628ced4a5caa1?background=false&autoplay=false&loop=true&disable_player_controls=false" },
+    videoSolo:   "https://play.gumlet.io/embed/6a44de9e18d11bffd5edffe2?background=false&autoplay=false&loop=true&disable_player_controls=false",
+    videoFiglio: "https://play.gumlet.io/embed/6a44de9de4e7cc890eccc949?background=false&autoplay=false&loop=true&disable_player_controls=false" },
   { id: "deadbug", name: "Dead Bug semplificato", pattern: "Anti-estensione + coordinazione", cat: "Core", duration: "10 per lato",
     source: "Derivato McGill, Pilates clinico",
     how: "Supino, gambe sollevate con ginocchia a 90°, braccia lungo i fianchi. Estendi una gamba alla volta senza staccare la lombare da terra. Torna. Alterna.",
@@ -745,23 +739,17 @@ const ESERCIZI = [
     easy: "Solo una gamba alla volta, braccia ferme.", hard: "Versione completa: gamba destra estesa + braccio sinistro esteso oltre la testa, contemporaneamente.",
     figlio: "Il bambino tocca alternativamente la tua mano (lungo il fianco) e il tuo piede esteso. Alto-basso con lui.",
     poster: "deadbug",
-    videoFiglio: "https://play.gumlet.io/embed/6a33a3421ce628ced4a5ca97?background=false&autoplay=false&loop=true&disable_player_controls=false" },
+    videoFiglio: "https://play.gumlet.io/embed/6a44de92e81b019c970db4d8?background=false&autoplay=false&loop=true&disable_player_controls=false" },
 
-  // ---- CARDIO DOLCE ----
-  { id: "marching", name: "Marcia sul posto", pattern: "Cardio dolce", cat: "Cardio dolce", duration: "60 sec",
-    source: "Riscaldamento standard per principianti",
-    how: "In piedi, marcia sul posto sollevando le ginocchia all'altezza dei fianchi (o poco meno). Braccia attive, alternate al movimento delle gambe. Respira regolare.",
-    wrong: "Curvare il busto in avanti. Tieni la postura alta.",
-    easy: "Solleva le ginocchia solo a metà, ritmo lento.", hard: "Più veloce, con piccoli rimbalzi sui piedi.",
-    figlio: "Marcia accanto a tuo figlio cantando una canzone. Lui imita.",
-    poster: "marching" },
-  { id: "kneelift", name: "Standing Knee Lift", pattern: "Attivazione core + flessori", cat: "Cardio dolce", duration: "10 per lato",
-    source: "Riabilitazione e Pilates",
-    how: "In piedi, schiena dritta. Solleva un ginocchio fino all'altezza dell'anca o più alto, mantieni 1 sec, scendi controllato. Alterna le gambe.",
-    wrong: "Curvare la schiena per portare il ginocchio più alto.",
-    easy: "Tocca con una mano un mobile per equilibrio.", hard: "Mani dietro la testa, equilibrio puro.",
-    figlio: "Il bambino davanti, ogni volta che il ginocchio sale gli dai un cinque sul ginocchio. Diventa un gioco di tocchi.",
-    poster: "kneelift" }
+  // ---- CARDIO & FULL BODY ----
+  { id: "mezzoburpee", name: "Mezzo Burpee", pattern: "Full body dinamico", cat: "Cardio & Full body", duration: "10 rep",
+    source: "Versione adattata del burpee classico — carico ridotto, movimento controllato",
+    how: "In piedi. Scendi portando le mani a terra e allunga le gambe indietro in posizione di plank. Torna in piedi risalendo controllato. Nessun salto finale.",
+    wrong: "Curvare la schiena scendendo o risalendo. Il core resta attivo durante tutto il movimento.",
+    easy: "Un piede alla volta, ritmo lento. Nessuna urgenza.", hard: "Aggiungi un piccolo salto in cima, oppure alza il ritmo — 15 rep in 30 secondi.",
+    figlio: "Il bambino conta i burpee a voce alta oppure ti dà un cinque ogni volta che ti rialzi.",
+    poster: "mezzoburpee",
+    videoSolo:   "https://play.gumlet.io/embed/6a44de9218d11bffd5edfe4a?background=false&autoplay=false&loop=true&disable_player_controls=false" }
 ];
 
 // =====================================================
@@ -893,8 +881,6 @@ function silhouetteFor(type) {
       return `<g fill="${fill}" opacity="${op}"><circle cx="130" cy="160" r="16"/><rect x="145" y="165" width="100" height="22" rx="11"/><rect x="170" y="180" width="22" height="55" rx="11"/><rect x="170" y="230" width="50" height="14" rx="7"/><rect x="220" y="180" width="22" height="55" rx="11"/><rect x="220" y="230" width="50" height="14" rx="7"/><rect x="245" y="165" width="80" height="20" rx="10" transform="rotate(-15 285 175)"/></g>`;
     case 'pushup':
       return `<g fill="${fill}" opacity="${op}"><circle cx="305" cy="170" r="17"/><rect x="120" y="188" width="180" height="22" rx="11"/><rect x="262" y="195" width="20" height="60" rx="10"/><rect x="232" y="195" width="20" height="55" rx="10"/><rect x="100" y="200" width="40" height="14" rx="7"/></g>`;
-    case 'wallpush':
-      return `<g fill="${fill}" opacity="${op}"><rect x="280" y="60" width="8" height="190"/><circle cx="200" cy="125" r="17"/><ellipse cx="200" cy="170" rx="22" ry="32"/><rect x="195" y="200" width="22" height="55" rx="11"/><rect x="180" y="245" width="50" height="14" rx="7"/><rect x="210" y="135" width="65" height="18" rx="9"/><rect x="210" y="155" width="65" height="18" rx="9"/></g>`;
     case 'tricepdip':
       return `<g fill="${fill}" opacity="${op}"><rect x="80" y="155" width="100" height="18" rx="2"/><rect x="80" y="173" width="10" height="60"/><rect x="170" y="173" width="10" height="60"/><circle cx="200" cy="110" r="17"/><rect x="180" y="135" width="40" height="55" rx="20"/><rect x="160" y="170" width="20" height="40" rx="10"/><rect x="190" y="190" width="55" height="18" rx="9"/><rect x="225" y="200" width="50" height="14" rx="7"/></g>`;
     case 'plank':
@@ -905,11 +891,10 @@ function silhouetteFor(type) {
       return `<g fill="${fill}" opacity="${op}"><circle cx="115" cy="175" r="16"/><rect x="115" y="180" width="190" height="20" rx="10" transform="rotate(-15 210 190)"/><rect x="125" y="195" width="14" height="55" rx="7"/><rect x="125" y="240" width="35" height="14" rx="7"/><rect x="150" y="170" width="14" height="65" rx="7"/><rect x="280" y="220" width="35" height="14" rx="7"/></g>`;
     case 'deadbug':
       return `<g fill="${fill}" opacity="${op}"><circle cx="105" cy="195" r="16"/><rect x="120" y="195" width="160" height="20" rx="10"/><rect x="160" y="130" width="18" height="65" rx="9"/><rect x="200" y="130" width="18" height="65" rx="9"/><rect x="230" y="155" width="55" height="14" rx="7"/><rect x="270" y="155" width="14" height="50" rx="7"/></g>`;
-    case 'marching':
-      return `<g fill="${fill}" opacity="${op}"><circle cx="200" cy="95" r="17"/><ellipse cx="200" cy="145" rx="22" ry="32"/><rect x="170" y="130" width="50" height="14" rx="7" transform="rotate(40 195 137)"/><rect x="195" y="170" width="20" height="55" rx="10"/><rect x="210" y="218" width="40" height="14" rx="7"/><rect x="170" y="170" width="20" height="40" rx="10" transform="rotate(-30 180 190)"/><rect x="125" y="195" width="40" height="14" rx="7"/></g>`;
-    case 'kneelift':
-      return `<g fill="${fill}" opacity="${op}"><circle cx="200" cy="95" r="17"/><ellipse cx="200" cy="145" rx="22" ry="32"/><rect x="195" y="175" width="20" height="60" rx="10"/><rect x="180" y="230" width="50" height="14" rx="7"/><rect x="170" y="155" width="18" height="50" rx="9" transform="rotate(40 179 180)"/><rect x="195" y="155" width="50" height="18" rx="9" transform="rotate(-10 220 164)"/></g>`;
     default: return '';
+    case 'mezzoburpee':
+      return `<g fill="${fill}" opacity="${op}"><circle cx="200" cy="105" r="18"/><ellipse cx="200" cy="155" rx="28" ry="36" transform="rotate(-8 200 155)"/><rect x="172" y="185" width="20" height="50" rx="10" transform="rotate(-15 182 210)"/><rect x="208" y="185" width="20" height="50" rx="10" transform="rotate(15 218 210)"/><rect x="160" y="225" width="18" height="45" rx="9"/><rect x="220" y="225" width="18" height="45" rx="9"/><rect x="180" y="140" width="48" height="14" rx="7" transform="rotate(-15 200 147)"/></g>`;
+
   }
 }
 
@@ -1430,7 +1415,7 @@ function openDayDetail(n) {
 function closeDayDetail() { document.getElementById('dayDetailModal').classList.remove('open'); }
 
 function renderEsercizi() {
-  const categories = ['Gambe & Glutei', 'Upper Body', 'Core', 'Cardio dolce'];
+  const categories = ['Gambe & Glutei', 'Upper Body', 'Core', 'Cardio & Full body'];
   const html = categories.map(cat => {
     const items = ESERCIZI.filter(e => e.cat === cat);
     return `<div class="cat-section">
